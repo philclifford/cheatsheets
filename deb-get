@@ -1,0 +1,61 @@
+---
+tags: [ software ]
+---
+
+# Usage
+
+deb-get {update | upgrade | show [pkg] | install [pkg] | reinstall [pkg] | remove [pkg]
+        | purge [pkg] | search [pkg] | cache | clean | list | prettylist | csvlist | help | version}
+
+
+
+#  update is used to resynchronize the deb-get package index files from their sources.
+#  it will start by invoking apt-get to update information from all configured apt sources
+deb-get update
+
+
+# to upgrade all packages currently installed on the system via deb-get to the newest released versions
+# it will start by invoking apt-get to upgrade information from all configured apt sources
+
+deb-get upgrade
+
+
+#  to install one or more packages
+deb-get install  [package]
+
+
+#  to reinstall or upgrade a single package
+deb-get reinstall  [package]  [package]
+
+#  to remove packages
+deb-get remove  [package]
+
+
+#  to purge packages and delete any configuration files.
+deb-get purge  [package]
+
+
+#  to clean clear out the local repository (/var/cache/deb-get) of retrieved package files.
+deb-get clean
+
+
+#  to search for the given regex(7) term(s) from the list of available packages supported by deb-get and display matches.
+deb-get search <regex>
+
+
+#  to show information about the given package including its install source and update mechanism.
+deb-get show [package]
+
+
+#  to list the packages available via deb-get.
+deb-get list
+deb-get prettylist
+deb-get csvlist
+
+#  to list the contents of the deb-get cache (/var/cache/deb-get)
+deb-get cache
+
+#  to show help or version information
+deb-get help
+deb-get version
+
